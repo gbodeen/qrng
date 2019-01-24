@@ -1,0 +1,40 @@
+{
+  "name": "lottery-picker",
+  "version": "0.0.1",
+  "description": "Always Win, Somewhere Out There",
+  "main": "index.jsx",
+  "scripts": {
+    "start": "node server/index.js",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gbodeen/lottery-picker.git"
+  },
+  "keywords": [
+    "PowerBall",
+    "MegaMillions"
+  ],
+  "author": "Gabriel Bodeen",
+  "license": "AGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/gbodeen/lottery-picker/issues"
+  },
+  "homepage": "https://github.com/gbodeen/lottery-picker#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.5",
+    "css-loader": "^2.1.0",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.29.0",
+    "webpack-cli": "^3.2.1"
+  },
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
