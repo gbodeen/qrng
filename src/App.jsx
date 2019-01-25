@@ -20,7 +20,7 @@ const App = () => {
     <>
       <h1>The app will go here.</h1>
       <h2>But it hasn't been written yet.</h2>
-      <PowerBall />
+      <PowerBall bits={bits} />
     </>
   )
 }

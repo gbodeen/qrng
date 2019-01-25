@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
-const PowerBall = () => {
+const PowerBall = (props) => {
+  const { bits } = props;
 
   const calcNums = () => {
     return 'nothing here yet';
@@ -12,6 +13,7 @@ const PowerBall = () => {
       <button className="pb" onClick={calcNums}>
         Gimme numbas!
       </button>
+      <p>{bits}</p>
     </>
   )
 }
