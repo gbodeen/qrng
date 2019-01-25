@@ -5,7 +5,7 @@ const App = () => {
   const [bits, setBits] = useState('');
 
   const getBits = () => {
-    fetch('https://qrng.anu.edu.au/API/jsonI.php?length=8&type=uint16',
+    fetch('https://qrng.anu.edu.au/API/jsonI.php?length=128&type=uint16',
       { method: 'GET', mode: 'cors' })
       .then(response => response.json())
       .then(json => {
@@ -20,7 +20,7 @@ const App = () => {
     <>
       <h1>The app will go here.</h1>
       <h2>But it hasn't been written yet.</h2>
-      <PowerBall bits={bits} />
+      <PowerBall bits={bits} setBits={setBits} />
     </>
   )
 }
