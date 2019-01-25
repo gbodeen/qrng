@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const App = () => {
   const [bits, setBits] = useState('');
@@ -8,10 +8,12 @@ const App = () => {
       { method: 'GET', mode: 'cors' })
       .then(response => response.json())
       .then(json => {
-        bits = json.data.map(n => n.toString(2)).join('') + bits;
-        setBits(bits);
+        let newbits = json.data.map(n => n.toString(2)).join('') + bits;
+        setBits(newbits);
       })
   }
+
+  useEffect(getBits, []); // empty array -> should only run once
 
   return (
     <>
