@@ -5,7 +5,7 @@ const App = () => {
   const [bits, setBits] = useState('');
 
   const getBits = () => {
-    fetch('https://qrng.anu.edu.au/API/jsonI.php?length=128&type=uint16',
+    fetch('https://qrng.anu.edu.au/API/jsonI.php?length=16&type=uint16',
       { method: 'GET', mode: 'cors' })
       .then(response => response.json())
       .then(json => {
@@ -14,7 +14,13 @@ const App = () => {
       })
   }
 
-  useEffect(getBits, []); // empty array -> should only run once
+  const checkIfNeedBits = () => {
+    if (bits.length < 80) {
+      getBits();
+    }
+  }
+
+  useEffect(checkIfNeedBits, [bits]);
 
   return (
     <>
