@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import PowerBall from './PowerBall.jsx';
 
 const App = () => {
   const [bits, setBits] = useState('');
@@ -19,6 +20,7 @@ const App = () => {
     <>
       <h1>The app will go here.</h1>
       <h2>But it hasn't been written yet.</h2>
+      <PowerBall />
     </>
   )
 }
